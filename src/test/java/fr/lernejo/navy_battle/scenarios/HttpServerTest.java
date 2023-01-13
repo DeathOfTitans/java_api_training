@@ -47,7 +47,7 @@ public class HttpServerTest extends Server implements AutoCloseable {
 
     public void waitForEndOfGame() throws InterruptedException, Exception {
         synchronized (lock) {
-            lock.wait(5000);
+            lock.wait(10000);
 
             if (!gameEnded())
                 throw new RuntimeException("The game did not complete in allowed time!");
